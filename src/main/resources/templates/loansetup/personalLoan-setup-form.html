@@ -1,0 +1,161 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+
+<link href="../static/css/bootstrap.css" rel="stylesheet" th:href="@{/css/bootstrap.css}" />
+<link href="../static/css/menu.css" rel="stylesheet" th:href="@{/css/menu.css}" />
+<link href="../static/js/bootstrap.min.js" rel="stylesheet" th:href="@{/js/bootstrap.min.js}" />
+<link href="../static/js/popper.min.js" rel="stylesheet" th:href="@{/js/popper.min.js}" />
+
+<title>Personal Loan</title>
+<style>
+span {
+	color: #b94a48;
+	font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+<div th:replace="fragments/header :: header">...</div>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-2" style="border-style: outset;">
+
+				<h4 style="background-color: #808080">Quick links</h4>
+				<hr>
+
+				<div th:replace="fragments/sidebar :: sidebar">...</div>
+
+			</div>
+			<div class="col-10" style="border-style: outset;">
+
+
+		<p class="h4 mb-4">Personal Loan Application</p>
+
+		<form action="#" th:action="@{/loanSetup/savePersonalLoanSetup}" class="form"
+			th:object="${thePersonalLoanSetup}" method="POST">
+			<div style="border-style: solid;">
+
+				<div style="border-style: outset;">
+
+					<h5>Setup Information</h5>
+					<hr>
+
+					<div class="row">
+
+						<div class="form-group mb-3 col-3">
+							<label for="creditAnalyst">Credit Analyst</label> <input
+								type="text" th:field="*{creditAnalyst}" class="form-control">
+						</div>
+						
+							<div class="form-group mb-3 col-3">
+							<label for="creditAnalystEmail">Credit Analyst Email:</label> <input
+								type="text" th:field="*{creditAnalystEmail}" class="form-control">
+						</div>
+						
+					</div>
+					<div class="row">
+
+						<div class="form-group mb-3 col-3">
+							<label for="securitiesSupervisor">Securities Supervisor:</label> <input
+								type="text" th:field="*{securitiesSupervisor}" class="form-control">
+						</div>
+
+						<div class="form-group mb-3 col-3">
+							<label for="securitiesSupervisorEmail">Securities Supervisor Email:</label> <input
+								type="text" th:field="*{securitiesSupervisorEmail}" class="form-control">
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group mb-3 col-3">
+							<label for="loanDisbursementSupervisor">Loan Opening Supervisor:</label> <input
+								type="text" th:field="*{loanDisbursementSupervisor}" class="form-control">
+						</div>
+						<div class="form-group mb-3 col-3">
+							<label for="loanDisbursementSupervisorEmail">Loan Opening Supervisor Email:</label> <input
+								type="text" th:field="*{loanDisbursementSupervisorEmail}" class="form-control">
+						</div>
+					</div>
+					
+					<div class="row">
+
+						<div class="form-group mb-3 col-3">
+							<label for="managerCredit">Manager Credit:</label> <input
+								type="text" th:field="*{managerCredit}" class="form-control">
+						</div>
+
+						<div class="form-group mb-3 col-3">
+							<label for="managerCreditEmail">Manager Credit Email:</label> <input
+								type="text" th:field="*{managerCreditEmail}" class="form-control">
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="form-group mb-3 col-3">
+							<label for="primeRate">Prime Rate:</label> <input
+								type="number" th:field="*{primeRate}" step="0.01"
+								class="form-control"> <span
+								th:if="${#fields.hasErrors('primeRate')}"
+								th:errors="*{primeRate}"></span>
+						</div>
+						
+						<div class="form-group mb-3 col-3">
+							<label for="floatingrate">Floating Rate:</label> <input
+								type="number" th:field="*{floatingrate}" step="0.01"
+								class="form-control"> <span
+								th:if="${#fields.hasErrors('floatingrate')}"
+								th:errors="*{floatingrate}"></span>
+						</div>
+						</div>
+					
+					<div class="row">
+						
+						<div class="form-group mb-3 col-3">
+							<label for="funeralCover">Funeral Cover:</label> <input
+								type="number" th:field="*{funeralCover}" step="0.01"
+								class="form-control"> <span
+								th:if="${#fields.hasErrors('funeralCover')}"
+								th:errors="*{funeralCover}"></span>
+						</div>
+						
+						<div class="form-group mb-3 col-3">
+							<label for="managementFee">Management Fee:</label> <input
+								type="number" th:field="*{managementFee}" step="0.01"
+								class="form-control"> <span
+								th:if="${#fields.hasErrors('managementFee')}"
+								th:errors="*{managementFee}"></span>
+						</div>
+	
+						
+					</div>
+					
+
+					<input type="submit" class="btn btn-info col-2" value="Save" />
+
+				</div>
+			</div>
+		</form>
+
+</div>
+		</div>
+	</div>
+
+	<div th:replace="fragments/footer :: footer">...</div>
+	<script type="text/javascript" th:href="@{/js/jquery-3.1.1.min.js}"></script>
+	<script type="text/javascript" th:href="@{/js/bootstrap.js}"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

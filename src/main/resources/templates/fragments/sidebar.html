@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+
+<link href="../static/css/menu.css" rel="stylesheet"
+	th:href="@{/css/menu.css}" />
+
+
+</head>
+<body>
+
+
+	<ol class="main-navigation" th:fragment="sidebar">
+	
+	<li><a th:href="@{/loanSetup/personalLoanSetupEdit/1}">Setup Personal Loan</a></li>
+		<li><a href="#">Disbursed Personal Loans</a></li>
+		<li><a href="#">Analyze Personal Disbursed Loan</a></li>
+		<li><a href="#">Delegate Personal  Loan</a></li>
+		<li><a href="#">Delete Personal Loan</a></li>
+		<li><a href="#">Cancel Personal loan</a></li>
+		<li><a th:href="@{/loanSetup/staffLoanSetupEdit/1}">Setup Staff Loan</a></li>
+		<li><a href="#">Disbursed Staff Loans</a></li>
+		<li><a href="#">Analyze Staff Disbursed Loan</a></li>
+		<li><a href="#">Delegate Staff  Loan</a></li>
+		<li><a href="#">Delete Staff Loan</a></li>
+		<li><a href="#">Cancel Staff loan</a></li>
+		
+
+	</ol>
+
+
+</body>
+</html>
