@@ -66,8 +66,7 @@ public class LoanSetUpController {
 
 	@PostMapping("/saveSetup")
 	public String saveStaffLoanSetup(@ModelAttribute("staffLoanSetup") StaffLoanSetup theStaffLoanSetup,Principal principal,
-			RedirectAttributes atts) throws IOException {
-		
+			RedirectAttributes atts) throws IOException {		
 		staffLoanSetupService.saveStaffLoanSetup(theStaffLoanSetup);
 		return "redirect:/staffLoan/staffLoanStatus";
 
@@ -92,25 +91,6 @@ public class LoanSetUpController {
 		
 		PersonalLoanSetup thePersonalLoanSetup = personalLoanSetupService.findStaffLoanSetupById(theId);
 		
-		if(thePersonalLoanSetup == null) {
-			
-			
-			thePersonalLoanSetup.setCreditAnalyst("test");
-			thePersonalLoanSetup.setCreditAnalystEmail("test@email.com");
-			thePersonalLoanSetup.setFloatingrate((float) 1.5);
-			thePersonalLoanSetup.setFuneralCover((float)2000);
-			thePersonalLoanSetup.setLoanDisbursementSupervisor("test");
-			thePersonalLoanSetup.setLoanDisbursementSupervisorEmail("test@email.com");
-			thePersonalLoanSetup.setManagementFee((float)500);
-			thePersonalLoanSetup.setManagerCredit("test");
-			thePersonalLoanSetup.setManagerCreditEmail("test@email.com");
-			thePersonalLoanSetup.setPrimeRate((float)10);
-			thePersonalLoanSetup.setSecuritiesSupervisor("test");
-			thePersonalLoanSetup.setSecuritiesSupervisorEmail("test@email.com");
-			
-			personalLoanSetupService.savePersonalLoanSetup(thePersonalLoanSetup);
-			
-		}
 
 		theModel.addAttribute("thePersonalLoanSetup", thePersonalLoanSetup);
 

@@ -83,10 +83,6 @@
 		</dependency>
 
 
-
-
-
-
 		<!-- tag::security[] -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

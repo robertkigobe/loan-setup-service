@@ -7,6 +7,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.sun.istack.NotNull;
+
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -23,42 +25,55 @@ public class PersonalLoanSetup {
 	@Column(name = "id")
 	private int id;
 
+	@NotNull
 	@Column(name = "credit_analyst")
 	private String creditAnalyst;
 	
+	@NotNull
 	@Column(name = "credit_analyst_email")
 	private String creditAnalystEmail;
 	
+	@NotNull
 	@Column(name = "floating_rate")
 	private float floatingrate;
 	
+	@NotNull
 	@Column(name = "funeral_cover")
 	private float funeralCover;
 
+	@NotNull
 	@Column(name = "loan_disbursement_supervisor")
 	private String loanDisbursementSupervisor;
 
+	@NotNull
 	@Column(name = "loan_disbursement_supervisor_email")
 	private String loanDisbursementSupervisorEmail;
 	
+	@NotNull
 	@Column(name = "management_fee")
 	private float managementFee;
 
+	@NotNull
 	@Column(name = "manager_credit")
 	private String managerCredit;
 	
+	@NotNull
 	@Column(name = "manager_credit_email")
 	private String managerCreditEmail;
 	
+	@NotNull
 	@Column(name = "prime_rate")
 	private float primeRate;
 	
+	@NotNull
 	@Column(name = "securities_supervisor")
 	private String securitiesSupervisor;
 
+	@NotNull
 	@Column(name = "securities_supervisor_email")
 	private String securitiesSupervisorEmail;
 	
+	@NotNull
 	@Column(name = "standing_fee")
 	private float standingFee;
 	

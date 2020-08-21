@@ -39,6 +39,8 @@ span {
 		<form action="#" th:action="@{/loanSetup/savePersonalLoanSetup}" class="form"
 			th:object="${thePersonalLoanSetup}" method="POST">
 			<div style="border-style: solid;">
+			
+			<input type="hidden" th:field="*{id}" />
 
 				<div style="border-style: outset;">
 
@@ -128,6 +130,14 @@ span {
 								class="form-control"> <span
 								th:if="${#fields.hasErrors('managementFee')}"
 								th:errors="*{managementFee}"></span>
+						</div>
+						
+						<div class="form-group mb-3 col-3">
+							<label for="standingFee">Standing Fee:</label> <input
+								type="number" th:field="*{standingFee}" step="0.01"
+								class="form-control"> <span
+								th:if="${#fields.hasErrors('standingFee')}"
+								th:errors="*{standingFee}"></span>
 						</div>
 	
 						
